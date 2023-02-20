@@ -1,0 +1,30 @@
+.tablee{
+    
+    margin-top: 20px;
+  
+}
+.tableerow,td{
+    border:1px solid black;
+}
+input{
+    width:100px
+}
+th{
+    border:1px solid black;
+   height: 7vh;
+   color:white;
+   background-color: rgb(67, 67, 244);
+}
+.App{
+    position:relative;
+
+}
+.AddList{
+    position: absolute;
+  top: 40vh;
+  right: 30vh;
+    width:10vw;
+    height:7vh;
+    background-color: rgb(67, 67, 244);
+    color:white
+}

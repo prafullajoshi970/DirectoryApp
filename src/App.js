@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import { BrowserRouter,Route,Routes} from 'react-router-dom'
+import TableData from './component/TableData'
+import Detail from './component/Deatil'
+import Adhar from './component/Adhar'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div><div className='head'><h4>Prafulla Joshi Directory App</h4></div>
+      
+      <BrowserRouter>
+      <Routes>
+        <Route path='Table' element={<TableData/>}></Route>
+        <Route path='/' element={<Detail/>}></Route>
+        <Route path='Adhar' element={<Adhar/>}></Route>
+      </Routes>
+    </BrowserRouter>
+     
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

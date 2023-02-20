@@ -1,0 +1,19 @@
+.retrive{
+    border :1px solid black;
+    width:60vw;
+    height:60vh;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.inputee{
+ width:30vw;
+ margin-top:10px;
+ margin-left: 10px;
+
+}
+.buttone,button{
+    width:10vw;
+    margin-left:5px;
+    color:white;
+    background-color: rgb(75, 75, 245);
+}
