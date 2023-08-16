@@ -5,7 +5,7 @@ import Detail from './component/Deatil'
 import Adhar from './component/Adhar'
 function App() {
   return (
-    <div><div className='head'><h4>Prafulla Joshi Directory App</h4></div>
+    <div><div className='head'><h2> Directory App</h2></div>
       
       <BrowserRouter>
       <Routes>

@@ -7,15 +7,15 @@ function TableData() {
   const [data,setData]=useState([{Name:"",DateOfBirth:"",Adhar:"",Mobile:"",Age:""},
   ]);
 
-  const getData = () => {
-    const data = localStorage.getItem('data');
-    if (data) {
-      return JSON.parse(data);
-    }
-    else {
-      return []
-    }
-  }
+  // const getData = () => {
+  //   const data = localStorage.getItem('data');
+  //   if (data) {
+  //     return JSON.parse(data);
+  //   }
+  //   else {
+  //     return []
+  //   }
+  // }
  
   
   const AddItem=()=>{
@@ -36,9 +36,9 @@ function TableData() {
 
   }
 
-  localStorage.setItem(`${data.Adhar}`, JSON.stringify(data));
+  localStorage.setItem('data', JSON.stringify(data));
 
-  
+
   // console.log(data);
   return (
     <div className="App">
@@ -63,11 +63,11 @@ function TableData() {
        
        <tr key={idx} className='tableerow'>
        <td>  <input name='Name' type={"text"} value={el.Name} onChange={(e)=>handleonChange(e,idx)}></input></td>
-       <td>  <input name='DateOfBirth' type={"text"} value={el.DateOfBirth} onChange={(e)=>handleonChange(e,idx)}></input></td>
+       <td>  <input name='DateOfBirth' type={"date"} value={el.DateOfBirth} onChange={(e)=>handleonChange(e,idx)}></input></td>
        <td>  <input name='Adhar' type={"text"} value={el.Adhar} onChange={(e)=>handleonChange(e,idx)}></input></td>
        <td>  <input name='Mobile' type={"text"} value={el.Mobile} onChange={(e)=>handleonChange(e,idx)}></input></td>
        <td>  <input name='Age' type={"text"} value={el.Age} onChange={(e)=>handleonChange(e,idx)}></input></td>
-       <td>  {data.length-1===idx &&<button onClick={getData && AddItem}>Save</button>}
+       <td>  {data.length-1===idx &&<button onClick={ AddItem}>Save</button>}
              {data.length-1===idx &&<button className='Buton' onClick={()=>DeleteItem(idx)}>Delete</button>}
               </td>
               {data.length-1 ===idx&&
